@@ -1,0 +1,10 @@
+# Build configuration
+[build]
+  publish = "."
+  command = "echo 'No build required - static site'"
+
+# Redirect rules (optional)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

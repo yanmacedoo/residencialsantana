@@ -616,12 +616,17 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   padding: var(--spacing-md);
   background-color: var(--white);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
+  aspect-ratio: 1;
+  /* Garante que sejam quadrados */
+  height: 100%;
+  /* Ocupa a altura total da grade */
 }
 
 .amenidade-item:hover {
@@ -630,14 +635,18 @@ section {
 }
 
 .amenidade-icon {
-  color: var(--accent-brown);
+  width: 48px;
+  height: 48px;
   margin-bottom: var(--spacing-sm);
+  display: block;
+  /* Garante comportamento de bloco */
 }
 
 .amenidade-title {
   color: var(--dark-brown);
   font-size: 0.9375rem;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 /* === SOBRE === */

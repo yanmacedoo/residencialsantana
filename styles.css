@@ -877,6 +877,8 @@ section {
   opacity: 0.9;
   transition: opacity var(--transition-fast);
   display: block;
+  flex-shrink: 0;
+  /* Garante que a logo não suma em telas pequenas */
 }
 
 .footer-logo:hover {

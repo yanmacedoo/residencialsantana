@@ -848,6 +848,30 @@ section {
   color: var(--bg-cream);
   opacity: 0.8;
   font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.footer-credits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-xs);
+}
+
+.footer-logo {
+  height: 24px;
+  width: auto;
+  opacity: 0.9;
+  transition: opacity var(--transition-fast);
+  display: block;
+}
+
+.footer-logo:hover {
+  opacity: 1;
 }
 
 /* === ANIMATIONS === */

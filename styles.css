@@ -258,9 +258,18 @@ a {
 
 .hero-title {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   animation: fadeInUp 0.8s ease;
+}
+
+.hero-logo-img {
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
 
 .hero-subtitle {

@@ -210,18 +210,18 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: var(--spacing-sm);
-  padding-bottom: var(--spacing-sm);
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
 }
 
 .logo img {
-  width: 140px;
+  width: 100px;
   height: auto;
 }
 
 @media (min-width: 768px) {
   .logo img {
-    width: 180px;
+    width: 120px;
   }
 }
 

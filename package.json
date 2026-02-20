@@ -4,6 +4,7 @@
   "description": "Website Residencial Santana - Suítes, Lofts e Apartamentos em Itacaré, BA",
   "scripts": {
     "build": "echo 'No build required - static site'",
-    "start": "python3 -m http.server 8000"
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000"
   }
 }

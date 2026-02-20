@@ -187,9 +187,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if ('requestIdleCallback' in window) {
     requestIdleCallback(() => {
       const criticalImages = [
-        'assets/images/suite.webp',
-        'assets/images/loft.webp',
-        'assets/images/apartamento.webp'
+        'assets/images/suites/image1.webp',
+        'assets/images/loft/image1.webp',
+        'assets/images/apt/image1.webp'
       ];
 
       criticalImages.forEach(src => {

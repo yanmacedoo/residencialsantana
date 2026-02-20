@@ -50,18 +50,26 @@ document.addEventListener('DOMContentLoaded', () => {
       if (images.length === 0) return;
 
       let currentIndex = 0;
+      let prevIndex = -1;
 
       // Garante que a primeira imagem esteja visível ao carregar
       images[currentIndex].classList.add('active');
 
       function showNextImage() {
-        // Remove a classe 'active' da imagem atual
-        images[currentIndex].classList.remove('active');
+        // Limpa a classe previous da imagem que já terminou o fade
+        if (prevIndex >= 0) {
+          images[prevIndex].classList.remove('previous');
+        }
 
-        // Avança para a próxima imagem (volta ao início quando chega ao final)
+        // A imagem atual se torna a anterior, caindo um nível de z-index
+        images[currentIndex].classList.remove('active');
+        images[currentIndex].classList.add('previous');
+        prevIndex = currentIndex;
+
+        // Avança para a próxima imagem
         currentIndex = (currentIndex + 1) % images.length;
 
-        // Adiciona a classe 'active' à nova imagem
+        // A nova imagem assume o topo com fade in
         images[currentIndex].classList.add('active');
       }
 

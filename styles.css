@@ -232,7 +232,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('assets/images/hero.webp');
+  background-image: url('assets/images/hero.webp?v=4');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -242,9 +242,9 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.5));
+  background: radial-gradient(circle,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 50%);
 }
 
 .hero-content {
@@ -269,16 +269,25 @@ a {
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.7));
 }
 
-.hero-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+.hero-head {
+  font-size: clamp(1.25rem, 3.5vw, 2rem);
+  margin-bottom: var(--spacing-xs);
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+
+.hero-subhead {
+  font-size: clamp(1rem, 2vw, 1.25rem);
   margin-bottom: var(--spacing-xl);
   font-weight: 400;
   line-height: 1.5;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  animation: fadeInUp 0.8s ease 0.2s backwards;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease 0.3s backwards;
 }
 
 .hero-ctas {
@@ -397,7 +406,6 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-slow);
 }
 
 .unidade-card:hover .unidade-image img {
@@ -409,21 +417,25 @@ section {
   position: relative;
 }
 
-.slideshow-image {
+.slideshow-container .slideshow-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1.2s ease-in-out, transform var(--transition-slow);
 }
 
-.slideshow-image.active {
-  position: relative;
+.slideshow-container .slideshow-image.active {
   opacity: 1;
+  z-index: 2;
 }
 
+.slideshow-container .slideshow-image.previous {
+  opacity: 0;
+  z-index: 1;
+}
 
 .unidade-content {
   padding: var(--spacing-md);

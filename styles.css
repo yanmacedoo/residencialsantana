@@ -214,6 +214,42 @@ a {
   padding-bottom: var(--spacing-xs);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.btn-lang {
+  color: var(--dark-brown);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-lang:hover {
+  background-color: rgba(175, 122, 72, 0.1);
+  color: var(--primary-color);
+}
+
+@media (max-width: 480px) {
+  .header-actions {
+    gap: var(--spacing-sm);
+  }
+
+  .btn-lang {
+    font-size: 1rem;
+    padding: 2px 4px;
+  }
+}
+
 .logo img {
   width: 100px;
   height: auto;

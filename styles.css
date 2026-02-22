@@ -678,6 +678,10 @@ section {
   margin: 0 auto;
 }
 
+.sobre-section .section-title {
+  text-align: left;
+}
+
 .sobre-text p {
   margin-bottom: var(--spacing-md);
   color: var(--dark-brown);

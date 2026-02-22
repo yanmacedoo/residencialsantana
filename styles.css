@@ -223,22 +223,7 @@ a {
 }
 
 .btn-lang {
-  color: var(--accent-brown);
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-decoration: none;
-  padding: 4px 8px;
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-lang:hover {
-  background-color: rgba(175, 122, 72, 0.1);
-  color: var(--primary-color);
+  padding: 0.875rem 1.2rem;
 }
 
 @media (max-width: 480px) {
@@ -247,8 +232,7 @@ a {
   }
 
   .btn-lang {
-    font-size: 1rem;
-    padding: 2px 4px;
+    padding: 0.6rem 1rem;
   }
 }
 

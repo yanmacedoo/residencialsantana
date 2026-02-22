@@ -209,7 +209,7 @@ a {
 .header-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding-top: var(--spacing-xs);
   padding-bottom: var(--spacing-xs);
 }

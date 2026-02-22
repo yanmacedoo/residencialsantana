@@ -209,7 +209,7 @@ a {
 .header-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   padding-top: var(--spacing-xs);
   padding-bottom: var(--spacing-xs);
 }
@@ -218,6 +218,8 @@ a {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
+  margin-top: 12px;
+  /* Aline with the 'SANTANA' baseline in the logo */
 }
 
 .btn-lang {

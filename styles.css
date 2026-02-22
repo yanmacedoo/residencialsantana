@@ -217,7 +217,7 @@ a {
 .header-actions {
   display: flex;
   align-items: stretch;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
   margin-top: 12px;
   /* Aline with the 'SANTANA' baseline in the logo */
 }
@@ -228,7 +228,7 @@ a {
 
 @media (max-width: 480px) {
   .header-actions {
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
   }
 
   .btn-lang {

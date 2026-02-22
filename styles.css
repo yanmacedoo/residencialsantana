@@ -891,18 +891,31 @@ section {
   gap: var(--spacing-xs);
 }
 
-.footer-links a,
-.footer-contact a {
+.footer-links a {
   color: var(--bg-cream);
   opacity: 0.9;
   transition: all var(--transition-fast);
+}
+
+.footer-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--bg-cream);
+  opacity: 0.9;
+  transition: all var(--transition-fast);
+}
+
+.footer-icon {
+  flex-shrink: 0;
+  stroke: var(--cta-light);
 }
 
 .footer-links a:hover,
 .footer-contact a:hover {
   opacity: 1;
   color: var(--cta-light);
-  padding-left: 4px;
+  transform: translateX(4px);
 }
 
 .footer-bottom {

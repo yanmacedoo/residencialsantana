@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const stickyBar = document.getElementById('stickyBar');
   const heroSection = document.getElementById('hero');
 
-  if (stickyBar && heroSection) {
+  if (stickyBar && heroSection && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
@@ -133,6 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // === SCROLL ANIMATIONS ===
   const animateOnScroll = () => {
     const elements = document.querySelectorAll('.unidade-card, .amenidade-item, .faq-item');
+
+    if (!('IntersectionObserver' in window)) {
+      elements.forEach(el => el.classList.add('fade-in-up'));
+      return;
+    }
 
     const observer = new IntersectionObserver(
       (entries) => {
